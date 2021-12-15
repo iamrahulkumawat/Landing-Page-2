@@ -1,0 +1,253 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body{
+    background-color: #000;
+}
+
+body::-webkit-scrollbar{
+    width: .3rem;
+}
+
+body::-webkit-scrollbar-thumb{
+    background-color: rgb(39, 36, 36);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track{
+    background-color: crimson;
+}
+
+::selection{
+    background-color: rgb(221, 212, 212);
+    color: #000;
+}
+
+.container{
+    width: 94%;
+    margin: auto;
+}
+
+nav{
+    width: 15rem;
+    height: 7vh;
+    margin: 0 auto;
+    background-color: crimson;
+    text-align: center;
+    position: fixed;
+    top: 0;
+    right: 10%;
+    z-index: 999;
+    cursor: pointer;
+}
+
+nav:hover{
+    display: none;
+}
+
+nav h2{
+    font-size: 1rem;
+    color: #ffffff;
+    padding-top: .5rem;
+}
+
+button{
+    background: none;
+    border: none;
+}
+
+.image{
+    display: block;
+    width: 95%;
+    margin: auto;
+    margin-top: 5vh;
+    height: 88vh;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.image img{
+    height: 100%;
+    width: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
+#left, #right {
+    position: absolute;
+    top: 50%;
+    font-size: 4rem;
+    color: #adb5bd;
+    opacity: 0.3;
+}
+
+#left{
+    left: 9%;
+}
+#right {
+    right: 9%;
+}
+
+/* button hover */
+
+#left:hover, #right:hover {
+    opacity: 0.8;
+    transition: ease 0.5s;
+}
+
+.card-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.card img{
+    height: 450px;
+    border-radius: 1rem;
+    transition: 0.3s ease;
+}
+
+.card img:hover{
+    opacity: 0.7;
+}
+
+.card-heading{
+    text-align: center;
+}
+
+.card-heading h1{
+    color: #adb5bd;
+    font-size: 5rem;
+    margin-top: 2rem;
+}
+.card-heading p{
+    color: turquoise;
+    opacity: .7;
+    width: 40vw;
+    margin: auto;
+    margin-top: 3rem;
+    font-size: 2rem;
+}
+
+.heading{
+    color: transparent;
+    text-align: left;
+    margin-top: 5rem;
+    font-size: 3rem;
+    -webkit-text-stroke: .1rem #adb5bd;
+}
+
+.blog-section{
+    display: grid;
+    grid-template-columns: repeat(auto-fill,minmax(400px,1fr));
+    gap: 3rem;
+}
+
+.box{
+    background-color: #222;
+    padding: 5rem 3.5rem;
+    text-align: center;
+    opacity: 0.7;
+    transition: 0.5s ease;
+}
+
+.box:hover{
+    opacity: 1;
+}
+
+.box i{
+    font-size: 3rem;
+    color: #fff;
+}
+
+.box h1{
+    color: #fff;
+}
+
+.box .fa-youtube{
+    color: #FF0000;
+}
+.box .fa-apple{
+    color: #000000;
+}
+.box .fa-whatsapp{
+    color: #25D366;
+}
+.box .fa-linkedin-in{
+    color: #0e76a8;
+}
+.box .fa-discord{
+    color: #2C2F33;
+}
+.box .fa-twitter{
+    color: #1DA1F2;
+}
+
+#menu{
+    color: #fff;
+    font-size: 2rem;
+    position: absolute;
+    top: 10%;
+    left: 7%;
+    transition: 0.2s ease;
+}
+
+.header{
+    background-color: #222;
+    position: absolute;
+    top: -100%;
+    left: 0;
+    right: 0;
+    padding: 3rem 5rem;
+    width: 100%;
+    z-index: 999;
+    transition: 0.5s linear;
+}
+
+.inner-header{
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+    font-size: 2rem;
+    flex-direction: row;
+}
+
+.header a{
+    color: #fff;
+}
+
+#close{
+    font-size: 3rem;
+    transition: 0.2s ease;
+}
+
+#close:hover,#menu:hover{
+    color: crimson;
+}
+
+.header.active{
+    top: 0;
+}
+
+
+
+
+@media(max-width: 732px){
+    .inner-header{
+        flex-direction: column;
+        text-align: center;
+    }
+}
+
+@media(max-width: 450px){
+    #menu{
+        margin-left: 5%;
+        margin-top: -2%;
+    }
+}
